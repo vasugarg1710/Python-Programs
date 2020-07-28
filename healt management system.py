@@ -1,16 +1,20 @@
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
 def log(client_name,data,log_choice):
     if log_choice==1:
         f = open(f"{client_name}_exercise.txt","a");
         f.write(data)
         f.write("\n")
         f.close()
-        print("Data has been successfully added to the file.")
+        print("Data has been successfully added to the file on the time:",getdate())
     elif log_choice==2:
         f = open(f"{client_name}_diet.txt", "a");
         f.write(data)
         f.write("\n")
         f.close()
-        print("Data has been successfully added to the file.")
+        print("Data has been successfully added to the file on the time:", getdate())
     else:
         print("Invalid input")
 
@@ -20,11 +24,13 @@ def retrieve(client_name):
         content =  f.read()
         print(content)
         f.close()
+        print("Retrieved on:", getdate())
     elif retrieve_choice==2:
+        print(getdate())
         f = open(f"{client_name}_diet.txt");
         content = f.read()
         print(content)
-        f.close()
+        print("Retrieved on:", getdate())
     else:
         print("Invalid Input")
 
