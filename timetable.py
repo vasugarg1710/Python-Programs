@@ -7,13 +7,12 @@ def TimeTableCreator(subjects,day_write,final_time_slots):
     print(f"{day_write} - {day}")
 
 
-print("This program generates a time table according to your time preference (morning,afternoon,evening). Subjects are randomly selected but the time slots are fixed so that you get a habit of studying at that particular time.")
-subjects = []
-while True:
-    subject = input("Enter a subject:\n")
-    if subject=="":
-        break
-    subjects.append(subject)
+print("This program generates a time table according to your time preference (morning,afternoon,evening). Subjects are selected by using difficulty level but the time slots are fixed so that you get a habit of studying at that particular time.")
+print("You can run this program multiple times to select best time table for you")
+diff = input("Enter the difficult subjects separated by a space\n")
+easy = input("Enter the easy subjects separated by a space\n")
+diffSubjects = diff.split()
+easySubjects = easy.split()
 total_hours = int(input("Enter the total number of hours you want to study:\n"))
 
 
@@ -35,12 +34,12 @@ print(f"If you want to study {total_hours} in a week then you have to study {stu
 final_time_slots = random.sample(time_slots, k=studyperday)  # list of my time slots
 print("Here is your required time table\n")
 
-TimeTableCreator(subjects,"Monday",final_time_slots)
-TimeTableCreator(subjects,"Tuesday",final_time_slots)
-TimeTableCreator(subjects,"Wednesday",final_time_slots)
-TimeTableCreator(subjects,"Thursday",final_time_slots)
-TimeTableCreator(subjects,"Friday",final_time_slots)
-TimeTableCreator(subjects,"Saturday",final_time_slots)
-TimeTableCreator(subjects,"Sunday",final_time_slots)
+TimeTableCreator(diffSubjects,"Monday",final_time_slots)
+TimeTableCreator(easySubjects,"Tuesday",final_time_slots)
+TimeTableCreator(diffSubjects,"Wednesday",final_time_slots)
+TimeTableCreator(diffSubjects,"Thursday",final_time_slots)
+TimeTableCreator(diffSubjects,"Friday",final_time_slots)
+TimeTableCreator(diffSubjects,"Saturday",final_time_slots)
+TimeTableCreator(easySubjects,"Sunday",final_time_slots)
 
 
