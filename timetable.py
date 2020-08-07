@@ -13,7 +13,7 @@ diff = input("Enter the difficult subjects separated by a space\n")
 easy = input("Enter the easy subjects separated by a space\n")
 diffSubjects = diff.split()
 easySubjects = easy.split()
-total_hours = int(input("Enter the total number of hours you want to study:\n"))
+total_hours = int(input("Enter the total number of hours you want to study in the whole week:\n"))
 
 
 print("What is your preference of studying: Morning or afternoon or evening:")
