@@ -27,5 +27,5 @@ Cured_Discharged = final_list[3][0]
 Migrated = final_list[4][0]
 Deaths = final_list[5][0]
 # print(Passenger_screened_on_Airport,Active_Cases,Cured_Discharged,Migrated,Deaths)
-notification2("Covid-19 Cases",f"Passenger screened on Airport - {Passenger_screened_on_Airport} , Active cases - {Active_Cases} , Cured/Discharge - {Cured_Discharged} , Migrated - {Migrated} , Deaths - {Deaths} ",20, "icon.ico")
+notification2("Covid-19 Cases",f"Passenger screened on Airport - {Passenger_screened_on_Airport} , Active cases - {Active_Cases} , Cured/Discharge - {Cured_Discharged} , Migrated - {Migrated} , Deaths - {Deaths} ",20, r"C:\Users\vasug\PycharmProjects\Python\icon.ico")
 
